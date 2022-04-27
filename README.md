@@ -2,9 +2,9 @@
  Casino slot made on C++ and SFML.
 
 ## Build
-1. Clone repository:
+1. Clone repository:</br>
 git clone https://github.com/Aidanhouk/CasinoSlot
-2. Download SFML for your platform and put into root folder:
+2. Download SFML for your platform and put into root folder:</br>
 https://www.sfml-dev.org/download/sfml/2.5.1/
 3. Generate project for your IDE using CMake.
 4. Build project using your IDE in Debug mode.
