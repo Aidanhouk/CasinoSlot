@@ -2,9 +2,10 @@
 
 #include "StateMachine/StateMachine.h"
 #include "Field/Field.h"
+#include "Sprite/Sprite.h"
 
-WinState::WinState(StateMachine* stateMachine, Field* field)
-	: IState(stateMachine, field), m_resultController(field)
+WinState::WinState(StateMachine* stateMachine, Field* field, Sprite* background, Sprite* foreground)
+	: IState(stateMachine, field, background, foreground), m_resultController(field)
 {
 }
 
@@ -23,8 +24,8 @@ void WinState::clickStartButton()
 
 void WinState::draw(sf::RenderWindow & window) const
 {
-	m_background.draw(window);
+	m_background->draw(window);
 	m_field->drawResultSymbols(window);
-	m_foreground.draw(window);
+	m_foreground->draw(window);
 	m_resultController.draw(window);
 }

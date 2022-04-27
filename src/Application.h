@@ -20,4 +20,7 @@ private:
 
 	Button m_startButton;
 	Button m_stopButton;
+
+	Sprite m_background;
+	Sprite m_foreground;
 };

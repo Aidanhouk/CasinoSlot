@@ -7,7 +7,7 @@ class Field;
 class RunState : public IState
 {
 public:
-	RunState(StateMachine* stateMachine, Field* field);
+	RunState(StateMachine* stateMachine, Field* field, Sprite* background, Sprite* foreground);
 
 	virtual void start() override;
 	virtual void update(float dt) override;

@@ -9,7 +9,7 @@ class Field;
 class StateMachine
 {
 public:
-	StateMachine(Field * field);
+	StateMachine(Field * field, Sprite* background, Sprite* foreground);
 
 	void update(float dt);
 

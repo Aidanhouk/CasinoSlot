@@ -4,7 +4,7 @@
 
 Application::Application()
 	: m_field(&m_stateMachine),
-	m_stateMachine(&m_field)
+	m_stateMachine(&m_field, &m_background, &m_foreground)
 {
 	sf::VideoMode winMode(g_config.resX, g_config.resY);
 	m_window.create(winMode, "Koi Princess", sf::Style::Close);
@@ -12,6 +12,9 @@ Application::Application()
 	// sets buttons positions and sizes
 	m_startButton.setData({ 640, 657 }, { 77, 90 });
 	m_stopButton.setData({ 753, 657 }, { 130, 51 });
+
+	m_background.loadFromFile("slot_background");
+	m_foreground.loadFromFile("slot_foreground");
 }
 
 void Application::runLoop()

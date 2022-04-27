@@ -2,9 +2,10 @@
 
 #include "StateMachine/StateMachine.h"
 #include "Field/Field.h"
+#include "Sprite/Sprite.h"
 
-WaitState::WaitState(StateMachine* stateMachine, Field* field)
-	: IState(stateMachine, field)
+WaitState::WaitState(StateMachine* stateMachine, Field* field, Sprite* background, Sprite* foreground)
+	: IState(stateMachine, field, background, foreground)
 {
 }
 
@@ -15,7 +16,7 @@ void WaitState::clickStartButton()
 
 void WaitState::draw(sf::RenderWindow & window) const
 {
-	m_background.draw(window);
+	m_background->draw(window);
 	m_field->drawResultSymbols(window);
-	m_foreground.draw(window);
+	m_foreground->draw(window);
 }

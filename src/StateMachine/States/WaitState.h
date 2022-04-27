@@ -5,7 +5,7 @@
 class WaitState : public IState
 {
 public:
-	WaitState(StateMachine* stateMachine, Field* field);
+	WaitState(StateMachine* stateMachine, Field* field, Sprite* background, Sprite* foreground);
 
 	virtual void clickStartButton() override;
 

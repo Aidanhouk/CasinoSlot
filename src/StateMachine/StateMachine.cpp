@@ -1,9 +1,9 @@
 #include "StateMachine/StateMachine.h"
 
-StateMachine::StateMachine(Field * field)
-	: m_waitState(this, field),
-	m_runState(this, field),
-	m_winState(this, field)
+StateMachine::StateMachine(Field * field, Sprite* background, Sprite* foreground)
+	: m_waitState(this, field, background, foreground),
+	m_runState(this, field, background, foreground),
+	m_winState(this, field, background, foreground)
 {
 	m_currentState = &m_waitState;
 }
