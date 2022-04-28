@@ -2,6 +2,7 @@
  Casino slot made on C++ and SFML.
 
 ## Build
+### Windows:
 1. Clone repository:</br>
 git clone https://github.com/Aidanhouk/CasinoSlot
 2. Download SFML for your platform and put into root folder:</br>
