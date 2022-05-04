@@ -1,5 +1,8 @@
 # CasinoSlot
  Casino slot made on C++ and SFML.
+ 
+## Video:
+https://youtu.be/5bi9hdYTZr0
 
 ## Build
 ### Windows:
