@@ -1,6 +1,6 @@
 #include "Field/Symbol/Symbol.h"
 
-#include "Config/Config.h"
+#include "Constants.h"
 #include "Field/Symbol/SymbolTexture.h"
 
 void Symbol::setPosition(sf::Vector2f& position)
@@ -44,7 +44,7 @@ void Symbol::draw(sf::RenderWindow & window) const
 
 bool Symbol::outOfRange() const
 {
-	bool belowTheScreen = m_sprite.getPosition().y > g_config.resY;
+	bool belowTheScreen = m_sprite.getPosition().y > RES_Y;
 	bool aboveTheScreen = m_sprite.getPosition().y + m_sprite.getTexture()->getSize().y < 0;
 	return belowTheScreen || aboveTheScreen;
 }

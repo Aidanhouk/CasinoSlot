@@ -22,7 +22,7 @@ public:
 	void startSpin();
 	void finishSpin();
 
-	void getResultSymbols(Symbol** result);
+	void setResultSymbols(Symbol** result);
 
 	void drawAllSymbols(sf::RenderWindow& window) const;
 	void drawResultSymbols(sf::RenderWindow& window) const;
@@ -32,7 +32,6 @@ private:
 	void resetSymbolsPositions();
 
 	std::array<Symbol, N_SYMBOLS_PER_SPIN> m_symbols;
-	float m_symbolHeight;
 
 	sf::Vector2f m_position;
 

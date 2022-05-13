@@ -1,7 +1,5 @@
 #include "Sprite/Sprite.h"
 
-#include "Config/Config.h"
-
 #include <iostream>
 
 void Sprite::loadFromFile(const std::string & fileName)

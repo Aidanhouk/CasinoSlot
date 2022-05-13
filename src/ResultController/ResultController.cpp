@@ -6,7 +6,7 @@
 
 ResultController::ResultController(Field * field)
 {
-	field->getResultSymbols(m_resultSymbols);
+	field->setResultSymbols(m_resultSymbols);
 
 	m_prizeWindow.loadFromFile("prize_window");
 	m_prizeWindow.setPosition({ 640, 570 });

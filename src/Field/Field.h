@@ -19,7 +19,7 @@ public:
 	void finishSpin();
 	void drumStopSpin();
 
-	void getResultSymbols(std::array<Symbol*, N_ROWS_ON_SCREEN * N_DRUMS> & resultSymbols);
+	void setResultSymbols(std::array<Symbol*, N_ROWS_ON_SCREEN * N_DRUMS> & resultSymbols);
 
 	void drawAllSymbols(sf::RenderWindow& window) const;
 	void drawResultSymbols(sf::RenderWindow& window) const;

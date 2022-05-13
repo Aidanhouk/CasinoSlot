@@ -2,11 +2,10 @@
 
 #include "StateMachine/StateMachine.h"
 #include "Field/Field.h"
+#include "Renderer/Renderer.h"
 
-#include "Sprite/Sprite.h"
-
-RunState::RunState(StateMachine * stateMachine, Field* field, Sprite* background, Sprite* foreground)
-	: IState(stateMachine, field, background, foreground)
+RunState::RunState(StateMachine * stateMachine, Field* field, Renderer* renderer)
+	: IState(stateMachine, field, renderer)
 {
 }
 
@@ -28,7 +27,7 @@ void RunState::clickStopButton()
 
 void RunState::draw(sf::RenderWindow & window) const
 {
-	m_background->draw(window);
+	m_renderer->drawBackground(window);
 	m_field->drawAllSymbols(window);
-	m_foreground->draw(window);
+	m_renderer->drawForeground(window);
 }

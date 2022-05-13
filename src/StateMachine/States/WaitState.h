@@ -5,9 +5,9 @@
 class WaitState : public IState
 {
 public:
-	WaitState(StateMachine* stateMachine, Field* field, Sprite* background, Sprite* foreground);
+	WaitState(StateMachine* stateMachine, Field* field, Renderer* renderer);
 
-	virtual void clickStartButton() override;
+	void clickStartButton() override;
 
-	virtual void draw(sf::RenderWindow& window) const override;
+	void draw(sf::RenderWindow& window) const override;
 };

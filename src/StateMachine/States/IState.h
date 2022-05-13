@@ -4,13 +4,13 @@
 
 class StateMachine;
 class Field;
-class Sprite;
+class Renderer;
 
 class IState
 {
 public:
-	IState(StateMachine* stateMachine, Field* field, Sprite* background, Sprite* foreground)
-		: m_stateMachine{ stateMachine }, m_field{ field }, m_background{ background }, m_foreground{ foreground }
+	IState(StateMachine* stateMachine, Field* field, Renderer* renderer)
+		: m_stateMachine{ stateMachine }, m_field{ field }, m_renderer{ renderer }
 	{};
 
 	virtual void start() {};
@@ -25,6 +25,5 @@ protected:
 	StateMachine* m_stateMachine;
 	Field * m_field;
 
-	Sprite* m_background;
-	Sprite* m_foreground;
+	Renderer* m_renderer;
 };

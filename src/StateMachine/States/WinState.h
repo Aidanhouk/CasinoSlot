@@ -7,7 +7,7 @@
 class WinState : public IState
 {
 public:
-	WinState(StateMachine* stateMachine, Field* field, Sprite* background, Sprite* foreground);
+	WinState(StateMachine* stateMachine, Field* field, Renderer* renderer);
 
 	virtual void start() override;
 

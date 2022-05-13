@@ -5,11 +5,12 @@
 #include "StateMachine/States/WinState.h"
 
 class Field;
+class Renderer;
 
 class StateMachine
 {
 public:
-	StateMachine(Field * field, Sprite* background, Sprite* foreground);
+	StateMachine(Field * field, Renderer * renderer);
 
 	void update(float dt);
 
